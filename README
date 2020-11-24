@@ -1,0 +1,60 @@
+adi.bamberger
+207755018
+Adi Bamberger
+
+I discussed the exercise with: Dor Shwarz, Hen Haviv.
+I used the website: Stackoverflow.
+
+Description:
+Start checking-Gets the input from the command line as the user wrote. Checks
+    if the input is legal. Stops the program if not, else checks how many
+    times each word is in the matrix by the directions got , and returns
+    the values.
+Check input args- Checks each parameter got if legal. If one of them isn't, it returns
+    a massage that says this. If all are legal, returns None
+    so the program will continue to run.
+Find words in matrix- Gets words list and checks how many times each word is in
+    the matrix by the directions got.
+Write output file- Gets the results as tuples and write them to a file named as got.
+    If the file already exists, it rewrite it. If it doesn't, it opens such.
+
+The seperation for functions:
+I seperated the functions to smaller ones, as written below:
+Read matrix file- Gets the place of the matrix file, returns if as list of lists
+    of every line.
+Read wordlist file- Gets the place of the word list and returns a list of the words in it
+Make dictionary list- Gets a dictionary and returns a list of tuples with it's values,
+    only the values that are different from 0
+Make directions set- Gets a string and changes if into a set
+Functions "find words in matrix" uses:
+Find word appearance- Gets a word, a matrix and directions and checks how many times
+    the word appears in the matrix, by the directions got.
+Go by direction- Checks if the direction is one of the staight ones or one of the diagonal,
+    and sends to another function according to that. Returns the number of times
+    it appears in the matrix by that direction.
+Do if diagonal- Sends the matrix to be reordered by the direction, so we will check only
+    for the right right down going diagonal arrow. Checks how many times a
+    word is in that matrix.
+Do if straight- Sends the matrix to be reordered by the direction, so we will check only
+    for the right arrow. Checks how many times a word is in that matrix.
+Reorder matrix- Sends the matrix to be reordered the matrix by the direction to be
+    as right to left arrow or as right down going diagonal arrow, by using the functions
+    reorder x, reorder uw, reorder l, reorder dz- each for the need.
+Build a new matrix- Get the number of rows and the number of columns and return a
+    matrix at those sizes. The matrix is built from a list with strings
+    within a list.
+
+My tests:
+I chose to check if the function do_if_straight works good. This function is very important
+and part of the basis of the program, and this is why I chose to check it.
+Test 1- Checks if good for the right arrow
+Test 2- Checks if good for the left arrow
+Test 3- Checks if good for the down arrow
+Test 4- Checks if good for the up arrow
+I chose to check those options because those are the four options that the
+function deals with, so I will see it works for all options.
+I also put in the letters in the word in other places in the matrix, to see if the
+function does exectly what it is supposed to do, and does not check options
+not got. 
+I did not check what happens when the matrix, word or direction holds no value,
+because the fuction will never get those values as written in my program.
